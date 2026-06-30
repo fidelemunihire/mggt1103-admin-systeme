@@ -1,0 +1,23 @@
+# Rapport de la Seance Pratique 1 - Administration Systeme
+
+**Nom de l'etudiant :** MUNIHIRE NYANGUBA FIDELE
+**Nom de l'etudiant :** 26200232  
+**Cours :** MGGT1103 - Administration Systeme  
+**Enseignant :** Dr. NIBITANGA Romeo  
+
+---
+
+## 1. Difference entre SysAdmin classique et Ingenieur DevOps/SRE
+
+Un **Sysadmin classique** gère les serveurs de façon manuelle et réactive. Il installe, configure et dépanne les machines une par une, souvent en SSH. L’accent est mis sur la stabilité et le maintien en condition opérationnelle.
+
+Un **Ingénieur DevOps/SRE** automatise tout avec du code : Infrastructure as Code. Il utilise des outils comme Vagrant, Terraform, Docker pour créer des environnements reproductibles. L’objectif est la vitesse de déploiement, la fiabilité et l’observabilité. Le SRE met l’accent sur les SLA, SLI et SLO pour mesurer la fiabilité. En résumé : le Sysadmin gère, le DevOps/SRE construit et automatise.
+
+---
+
+## 2. Verification des ressources de la Machine Virtuelle
+
+Les commandes suivantes ont ete executees avec succes a l'interieur de la VM Ubuntu installee via Vagrant :
+
+* `uname -a` : Permet d'afficher les informations completes du noyau Linux utilise par la VM.
+* `free -h` : Permet de verifier la quantite de memoire RAM allouee (environ 1 Go) et l'espace actuellement consomme.
