@@ -1,0 +1,51 @@
+# rapport_hardening.md  - Administration Systeme
+
+**Nom de l'etudiant :** MUNIHIRE NYANGUBA FIDELE
+**Nom de l'etudiant :** 26200232  
+**Cours :** MGGT1103 - Administration Systeme  
+**Enseignant :** Dr. NIBITANGA Romeo  
+
+---
+
+
+## 1.La description des actions que vous avez entreprises pour résoudre 3 suggestions de sécurité faites par Lynis (avec les commandes réelles exécutées).
+
+Une **Renforcement de la configuration SSH** 
+
+Suggestion de Lynis :renforcer la configuration du serveur SSH afin de limiter les risques liés aux connexions distantes.
+
+Commandes exécutées : sudo nano /etc/ssh/sshd_config:
+
+Une **Installation et activation d'auditd** 
+
+Suggestion de Lynis : d'activer un système d'audit afin d'enregistrer les événements de sécurité du système.
+
+Commandes exécutées :
+sudo apt update
+sudo apt install auditd -y 
+sudo systemctl enable auditd 
+sudo systemctl start auditd
+sudo systemctl status auditd
+
+
+une **Ajout d'une bannière légale**
+
+Suggestion de Lynis :ajouter une bannière d'avertissement pour informer les utilisateurs que le système est réservé aux personnes autorisées..
+
+
+Commandes exécutées : sudo nano /etc/issue
+
+---
+
+## 3. Différence entre SIGTERM (15) et SIGKILL (9)
+
+* `Le signal SIGTERM (15)`: demande à un programme de s'arrêter proprement. Le processus reçoit le signal et peut sauvegarder ses données, fermer ses fichiers et effectuer un nettoyage avant de quitter. Il peut également intercepter ou ignorer ce signal.
+
+* `Le signal SIGKILL (9)`:force immédiatement l'arrêt du processus. Le programme ne peut ni intercepter ni ignorer ce signal. Le système termine le processus sans lui laisser le temps d'effectuer des opérations de nettoyage ou de sauvegarde.
+
+
+## 4.le but et le fonctionnement de la limitation ajoutée dans le fichier limits.conf.
+
+La limitation ajoutée dans le fichier **limits.conf** a pour objectif de contrôler les ressources système pouvant être utilisées par un utilisateur ou un groupe d'utilisateurs. Elle permet de définir des limites, telles que le nombre maximal de processus, de fichiers ouverts ou la quantité de mémoire utilisable. Ainsi, elle contribue à améliorer la stabilité, la sécurité et les performances du système en évitant qu'un utilisateur ne monopolise les ressources disponibles.
+
+
